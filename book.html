@@ -45,25 +45,10 @@ a{color:#3243AF}a:hover{color:#232A6B}
 </div>
 
 <div style="flex: 1.4 1 480px; min-width: 0">
-<!-- Connect this form to your form service (e.g. Formspree, Netlify Forms, Squarespace) by setting action="..." and method="post". -->
-<form id="booking-form" style="background: #FFFFFF; border: 1px solid #E7E3F4; border-radius: 2px; box-shadow: 0 6px 18px rgba(22, 24, 46, 0.08); padding: 40px clamp(20px, 4vw, 44px); display: flex; flex-direction: column; gap: 22px">
-<h2 style="margin: 0; font-family: 'EB Garamond', serif; font-weight: 400; font-size: 34px; line-height: 1.1; color: #232A6B">A little about you</h2>
-<label style="display: flex; flex-direction: column; gap: 8px; font-size: 15px; font-weight: 500">Name<input type="text" name="name" autocomplete="name" required="" style="font-family: 'Jost', sans-serif; font-size: 17px; font-weight: 300; padding: 13px 14px; min-height: 48px; box-sizing: border-box; background: #FFF7FA; border: 1px solid #8C86B3; border-radius: 2px; color: #16182E"></label>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 22px">
-<label style="display: flex; flex-direction: column; gap: 8px; font-size: 15px; font-weight: 500">Phone number<input type="tel" name="phone" autocomplete="tel" required="" style="font-family: 'Jost', sans-serif; font-size: 17px; font-weight: 300; padding: 13px 14px; min-height: 48px; box-sizing: border-box; background: #FFF7FA; border: 1px solid #8C86B3; border-radius: 2px; color: #16182E"></label>
-<label style="display: flex; flex-direction: column; gap: 8px; font-size: 15px; font-weight: 500">Email address<input type="email" name="email" autocomplete="email" required="" style="font-family: 'Jost', sans-serif; font-size: 17px; font-weight: 300; padding: 13px 14px; min-height: 48px; box-sizing: border-box; background: #FFF7FA; border: 1px solid #8C86B3; border-radius: 2px; color: #16182E"></label>
-</div>
-<label style="display: flex; flex-direction: column; gap: 8px; font-size: 15px; font-weight: 500"><span>Message <span style="font-weight: 300; color: #4A4E6E">(optional)</span></span><textarea name="message" rows="5" placeholder="What brings you to Dreamweaver?" style="font-family: 'Jost', sans-serif; font-size: 17px; font-weight: 300; line-height: 1.5; padding: 13px 14px; box-sizing: border-box; background: #FFF7FA; border: 1px solid #8C86B3; border-radius: 2px; color: #16182E; resize: vertical"></textarea></label>
-<label style="display: flex; flex-direction: column; gap: 8px; font-size: 15px; font-weight: 500; max-width: 320px"><span>Referral code <span style="font-weight: 300; color: #4A4E6E">(optional)</span></span><input type="text" name="referral" style="font-family: 'Jost', sans-serif; font-size: 17px; font-weight: 300; padding: 13px 14px; min-height: 48px; box-sizing: border-box; background: #FFF7FA; border: 1px solid #8C86B3; border-radius: 2px; color: #16182E; letter-spacing: 0.06em"></label>
-<button type="submit" style="align-self: flex-start; font-family: 'Jost', sans-serif; font-size: 16px; font-weight: 500; letter-spacing: 0.04em; background: #3243AF; color: #FFFFFF; border: 0; border-radius: 2px; padding: 14px 30px; min-height: 48px; cursor: pointer">Send</button>
-</form>
-<div id="booking-sent" role="status" hidden style="background: #3243AF; color: #FFFFFF; border-radius: 2px; padding: 48px clamp(20px, 4vw, 44px); display: flex; flex-direction: column; gap: 18px; position: relative; overflow: hidden">
-<img src="assets/mark-orchid.png" alt="" aria-hidden="true" style="position: absolute; right: -80px; bottom: -80px; width: 320px; height: 319px; opacity: 0.14">
-<span style="font-size: 13px; letter-spacing: 0.22em; text-transform: uppercase; color: #F3CCEF; font-weight: 500">Received</span>
-<h2 style="margin: 0; font-family: 'EB Garamond', serif; font-weight: 400; font-size: 44px; line-height: 1.1">Thank you.</h2>
-<p style="margin: 0; font-family: 'Libre Baskerville', serif; font-size: 16px; line-height: 1.8; max-width: 460px">Rob has a copy of your responses and will be in touch shortly to arrange your free consultation call.</p>
-<button type="button" id="booking-reset" style="align-self: flex-start; font-family: 'Jost', sans-serif; font-size: 16px; font-weight: 500; background: transparent; color: #FFFFFF; border: 1.5px solid #FFFFFF; border-radius: 2px; padding: 12px 22px; min-height: 48px; cursor: pointer">Send another</button>
-</div>
+<!-- Calendly inline widget begin -->
+<div class="calendly-inline-widget" data-url="https://calendly.com/d/d2ms-pxj-7rr?text_color=0b0b12&primary_color=3243af" style="min-width:320px;height:700px;"></div>
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<!-- Calendly inline widget end -->
 </div>
 </main>
 
@@ -78,10 +63,6 @@ a{color:#3243AF}a:hover{color:#232A6B}
 </div>
 </footer>
 </div>
-<script>
-var f=document.getElementById('booking-form'),ok=document.getElementById('booking-sent');
-f.addEventListener('submit',function(e){ if(!f.getAttribute('action')){e.preventDefault();} f.hidden=true; ok.hidden=false; });
-document.getElementById('booking-reset').addEventListener('click',function(){ f.reset(); ok.hidden=true; f.hidden=false; });
-</script>
+
 </body>
 </html>
